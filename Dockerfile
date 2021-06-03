@@ -4,4 +4,5 @@ RUN gem install mdl
 
 USER root
 
-ENTRYPOINT mdl
+ENTRYPOINT ["/usr/local/bundle/bin/mdl"]
+CMD ["."]
