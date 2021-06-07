@@ -1,8 +1,8 @@
-FROM ruby:slim
+FROM node:lts-slim
 
-RUN gem install mdl
+RUN npm install -g markdownlint-cli2 --save-dev
 
 USER root
 
-ENTRYPOINT ["/usr/local/bundle/bin/mdl"]
+ENTRYPOINT ["/usr/local/bin/markdownlint-cli2"]
 CMD ["."]
